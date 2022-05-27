@@ -129,4 +129,10 @@ const config = {
     }),
 };
 
-module.exports = config;
+module.exports = {
+  url: 'https://evoluservices.github.io', // Your website URL
+  baseUrl: '/',
+  projectName: 'evoluservices-developer',
+  organizationName: 'Evoluservices',
+  trailingSlash: false,
+};
