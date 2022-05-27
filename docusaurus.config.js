@@ -65,9 +65,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'payment-link',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Link de Pagamento',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
@@ -84,8 +84,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Link de Pagamento',
+                to: '/docs/payment-link',
               },
             ],
           },
