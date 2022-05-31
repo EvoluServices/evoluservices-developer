@@ -1,6 +1,6 @@
 {
-  "label": "Transação Remota",
-  "position": 2,
+  "label": "Link de Pagamento",
+  "position": 1,
   "link": {
     "type": "generated-index",
     "description": "teste descrição"

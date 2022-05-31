@@ -63,15 +63,27 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'payment-link',
+            docId: 'intro',
+            label: 'Introdução',
             position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'payment-link/introduction-payment-link',
             label: 'Link de Pagamento',
+            position: 'left',
+          },
+          {
+            type: 'doc',
+            docId: 'remote-transaction/introduction-remote-transaction',
+            label: 'Transação Remota',
+            position: 'left'
           },
           {
             type: 'doc',
             docId: 'intro',
-            label: 'Transação Remota',
-            position: 'left'
+            label: 'Contato',
+            position: 'left',
           },
           {
             href: 'https://github.com/EvoluServices/evoluservices-developer',
@@ -87,8 +99,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Link de Pagamento',
-                to: '/docs/payment-link',
+                label: 'Tutorial',
+                to: '/docs/intro',
               },
             ],
           },
@@ -132,10 +144,4 @@ const config = {
     }),
 };
 
-module.exports = {
-  url: 'https://evoluservices.github.io', // Your website URL
-  baseUrl: '/',
-  projectName: 'evoluservices-developer',
-  organizationName: 'Evoluservices',
-  trailingSlash: false,
-};
+module.exports = config;
