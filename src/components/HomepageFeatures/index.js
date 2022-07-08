@@ -4,32 +4,36 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Easy to Use",
-    Svg: require("@site/static/img/logo.svg").default,
+    title: "Saúde Service",
+    Svg: require("@site/static/img/logo-saude.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Sistema completo de pagamentos com cartões,
+        desenvolvido exclusivamente para profissionais da área da saúde,
+         com soluções que facilitam também os processos
+         administrativos nas clínicas ou consultórios
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    title: "Evo",
+    Svg: require("@site/static/img/logo-evo.svg").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Sistema de pagamento elaborado para atender à determinados
+        segmentos do comercio oferecendo soluções personalizadas
+        e atendimento diferenciado para os estabelecimentos cadastrados
       </>
     ),
   },
   {
-    title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    title: "Finpet",
+    Svg: require("@site/static/img/logo-finpet.svg").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Sistema de pagamento ideal para o mundo pet
+        com Ferramentas exclusivas para a área veterinária
+        com split de Pagamento para seus prestadores de serviços e fornecedores
       </>
     ),
   },
