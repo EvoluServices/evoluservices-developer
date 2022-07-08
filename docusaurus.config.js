@@ -94,41 +94,57 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Documentação",
             items: [
               {
-                label: "Tutorial",
+                label: "Introdução",
                 to: "/docs/intro",
               },
+              {
+                label: "Link de Pagamento",
+                to: "/docs/paymentLink/intro-payment-link",
+              },
+              {
+                label: "Transação Remota",
+                to: "/docs/remoteTransaction/intro-remote-transaction",
+              },
+              {
+                label: "Contato",
+                to: "/docs/contact",
+              }
             ],
           },
           {
-            title: "Community",
+            title: "Serviços",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Saúde Service",
+                href: "https://saudeservice.com.br/",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "Evo",
+                href: "https://www.sejaevo.com.br/",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Finpet",
+                href: "https://www.finpet.com.br/",
               },
             ],
           },
           {
-            title: "More",
+            title: "Mais",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "Linkedin",
+                href: "https://br.linkedin.com/company/evoluservices",
               },
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "Instagram",
+                href: "https://www.instagram.com/evoluservices",
+              },
+              {
+                label: "Facebook",
+                href: "https://www.facebook.com/timeevoluservices",
               },
             ],
           },
