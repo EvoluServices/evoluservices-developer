@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 ---
-# Introdução
+# Transação Remota
 
 O objetivo desta documentação é orientar o desenvolvedor sobre como utilizar nossas APIs para integrar com a solução Evo/SaúdeService de transações Pinpad, descrevendo as funcionalidades, os métodos a serem utilizados, listando informações a serem enviadas e recebidas, e provendo exemplos.
 
