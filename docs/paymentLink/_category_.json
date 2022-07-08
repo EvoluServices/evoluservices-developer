@@ -1,0 +1,8 @@
+{
+  "label": "Link de Pagamento",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Aqui você vai encontrar informações técnicas necessárias para integrar com API de Orders, contendo procedimentos para sua autenticação, os Ambientes de Testes e a lista de todos os endpoints, com suas requisições e respostas."
+  }
+}
