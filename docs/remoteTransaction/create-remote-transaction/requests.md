@@ -17,5 +17,6 @@ Cria uma nova transação referente a uma cobrança. Os parâmetros permitem det
 * **Retorno dos dados: Callback**
 
 Durante todo o ciclo de vida da transação (criação, aprovação/cancelamento, pagamento, etc), os dados da transação referentes às mudanças de estado são enviadas ao endereço informado ao criar a cobrança.
-<aside class="notice"> Para as transações remotas na maquininha (POS), a chamada à callback será feita após um período de 10 a 15 minutos do término da transação, visto que a callback só será chamada após a inserção das transações no sistema.
-</aside>
+:::info informações
+Para as transações remotas na maquininha (POS), a chamada à callback será feita após um período de 10 a 15 minutos do término da transação, visto que a callback só será chamada após a inserção das transações no sistema.
+:::

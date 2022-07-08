@@ -7,5 +7,3 @@ sidebar_position: 2
 É necessário especificar no header o tipo de conteúdo enviado no body da requisição.
 
 `Content-Type`: `application/json`
-
-> ```Content-Type application/json```
