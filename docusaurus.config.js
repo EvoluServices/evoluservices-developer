@@ -9,7 +9,7 @@ const config = {
   title: "EvoluServices",
   tagline: "Meios de Pagamentos Ltda.",
   url: "https://evoluservices.github.io",
-  baseUrl: "/",
+  baseUrl: "/evoluservices-developer/",
   projectName: "evoluservices-developer",
   organizationName: "EvoluServices",
   trailingSlash: false,
