@@ -1,46 +1,26 @@
----
----
-
 # Contato
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Disponibilizamos uma equipe de suporte especializada que está pronta para entrar
+em contato com o estabelecimento caso seja necessário alguma ajuda.
 
-## Getting Started
+### Novo Cliente
+Caso ainda não seja um cliente nosso, entre em contato com o nosso setor
+comercial através do
+**[WhatsApp Comercial](https://api.whatsapp.com/send?1=pt_BR&phone=551130148680)**
+para saber mais sobre os nossos produtos.
 
-Get started by **creating a new site**.
+### Dúvidas Comerciais
+Caso já seja um cliente e está com dúvidas com relação à integração, entre em
+contato pelo **[formulário de dúvidas técnicas](https://app.pipefy.com/public/form/fSSA2SjJ?qual_o_motivo_do_seu_contato=Estou%20com%20d%C3%BAvidas%20no%20processo%20de%20integra%C3%A7%C3%A3o)**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Seja um Parceiro EvoluServices
+Caso queira se tornar um Parceiro EvoluServices, entre em contato pelo
+**[formulário de novos parceiros](https://app.pipefy.com/public/form/fSSA2SjJ?qual_o_motivo_do_seu_contato=Tenho%20interesse%20em%20realizar%20parceria)**.
 
-### What you'll need
+### Dúvidas Técnicas
+Caso seja necessário, pode entrar em contato pelos seguintes meios de
+comunicação:
 
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+**[E-mail: integracoes@evoluservices.com](mailto:integracoes@evoluservices.com)**
 
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+**[WhatsApp: +55 (11) 93367-9024](https://api.whatsapp.com/send?1=pt_BR&phone=5511933679024)**
