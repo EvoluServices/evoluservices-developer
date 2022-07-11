@@ -10,10 +10,10 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |-----------|----|---------|
 |`remoteTransactionId`|Texto|Identificador da transação.|
 |`transactionNumber`|Texto|Número da transação.|
-|`status`|Texto|Status da transação (consulte [a tabela de valores de status](../../category/tabela-de-valores)).|
+|`status`|Texto|Status da transação (consulte  a [tabela de status da transação](../../remoteTransaction/value-table/transaction-status)).|
 |`merchantId`|Número|Identificador do estabelecimento.|
 |`value`|Número|Valor total da transação.|
-|`paymentBrand`|Texto|Bandeira do cartão (para lista consulte [tabela de bandeiras](../value-table/brand)).|
+|`paymentBrand`|Texto|Bandeira do cartão (para lista consulte a [tabela de bandeiras](../value-table/brand)).|
 |`terminalId`|Texto|ID do terminal.|
 |`payments`|Lista de objetos|Pagamentos aos estabelecimentos da transação.|
 |`paymentQuantity`|Número|Número de pagamentos ao estabelecimento.|
@@ -23,7 +23,7 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |`authorizationNumber`|Número|Número de autorização da transação, disponível apenas depois de aprovada.|
 
 ```json
-{ 
+{
   "remoteTransactionId": "<id>",
   "status": "APPROVED",
   "merchantId": "<id>",
@@ -83,5 +83,5 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |`recipientDocument`|Texto|Documento do estabelecimento ou do beneficiário, no caso do split.|
 
 :::info informações
-Veja a seção [Tabela de Valores](../../category/tabela-de-valores) para os possíveis status da transação e do pagamento.
+Veja a seção **[Tabela de Valores](../../category/tabela-de-valores)** para os possíveis status da transação e do pagamento.
 :::

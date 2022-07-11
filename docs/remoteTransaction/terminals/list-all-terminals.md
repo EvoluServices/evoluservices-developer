@@ -31,7 +31,7 @@ Você deve especificar no cabeçalho da requisição o tipo de conteúdo enviado
 |`macAddress`|Texto|O endereço físico (MAC Address) associado ao terminal.|
 |`computerName`|Texto|O nome do computador associado ao terminal.|
 |`terminalId`|Texto|O id do terminal que pode ser utilizado como parâmetro para [iniciar uma transação remota](../create-remote-transaction).|
-|`terminalStatus`|Texto|O status do terminal (consulte [a tabela de valores](../value-table/terminal-status)).|
+|`terminalStatus`|Texto|O status do terminal (consulte a [tabela de status do terminal](../value-table/terminal-status)).|
 
 ```json
 [

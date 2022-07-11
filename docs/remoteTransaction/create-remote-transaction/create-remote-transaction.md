@@ -7,26 +7,29 @@ sidebar_position: 2
 Para criar uma transação que utilizará cartão de crédito, é necessário enviar uma requisição utilizando o método `POST` utilizando no header o token informado além dos dados de uma transação para registro na EvoluServices, conforme o exemplo.
 
 :::info informações
-Antes de criar um transação, verifique o status do terminal. Veja a seção [Listar Terminais](../terminals/list-all-terminals).
+Antes de criar um transação, verifique o status do terminal. Veja a seção **[Listar todos os terminais](./terminals/list-all-terminals)**.
 :::
 
 ## Requisição HTTP
+
 `POST /remote/transaction`
 
 ## Header
 
 É necessário especificar no header o tipo de conteúdo enviado no body da requisição, junto com o Bearer.
 
-|Parâmetro|Valor|
-|---------|-----|
-|`Content-Type`|`application/json`|
-|`Bearer`|`TOKEN`|
+| Parâmetro      | Valor              |
+| -------------- | ------------------ |
+| `Content-Type` | `application/json` |
+| `Bearer`       | `TOKEN`            |
 
 :::danger atenção
 A requisição precisa incluir um <b>token de autenticação válido</b> no header.
 :::
 
 ## Body
+
+### Java
 
 ```java
  public static void main(String[] args) throws IOException {
@@ -65,10 +68,9 @@ A requisição precisa incluir um <b>token de autenticação válido</b> no head
             System.out.println(conn.getResponseCode());
             System.out.println(conn.getResponseMessage());
         }
-
     }
 ```
-
+### C#
 ```csharp
 private static void CreateTransaction()
 	{
@@ -116,7 +118,7 @@ private static void CreateTransaction()
 		}
 	}
 ```
-
+### JSON
 ```json
 {
   "transaction": {
@@ -127,23 +129,26 @@ private static void CreateTransaction()
     "paymentBrand": "VISA_CREDITO",
     "callbackUrl": "<url>",
     "clientName": "<name>",
-    "installmentsCanChange" : "false",
+    "installmentsCanChange": "false",
     "clientEmail": "<email>",
-    "splits": [{
-      "code": "<code>",
-      "value": "2.00",
-      "chargeFees": true
-    },  {
-      "code": "<code>",
-      "value": "3.00",
-      "chargeFees": false
-    }]
+    "splits": [
+      {
+        "code": "<code>",
+        "value": "2.00",
+        "chargeFees": true
+      },
+      {
+        "code": "<code>",
+        "value": "3.00",
+        "chargeFees": false
+      }
+    ]
   }
 }
 ```
 
-|Propriedade|Tipo|Obrigatório|Descrição|Validação|
-|-----------|----|-----------|---------|---------|
+|Propriedade |Tipo|Obrigatório|Descrição|Validação|
+|----------- |----|-----------|---------|---------|
 |`merchantId`|Texto|Sim|Identificador do estabelecimento (obtido junto ao suporte).|`[0-9A-Za-z]+`|
 |`terminalId`|Texto|Não|Id do terminal reponsável por processar a transação. Caso especificado, a transação iniciará automaticamente, caso contrário, uma notificação será exibida nos dispositivos habilitados. A lista de ids pode ser obtida através do método [Listar terminais](./terminals/list-all-terminals)|`[0-9A-Za-z+/*]{6,300}`|
 |`value`|Número|Sim|Valor do orçamento (em decimal, com o "." como separador e 2 casas decimais).|`\d+\.\d{2}`|
@@ -170,7 +175,6 @@ Para especificar o tipo de cobrança (crédito/débito) da transação remota na
 casos.
 :::
 
-
 ## Parâmetros do split
 
 |Propriedade|Tipo|Obrigatório|Descrição|Validação|
@@ -185,6 +189,9 @@ A URL de callback tem que ser https.
 
 ## Resposta
 
+Em caso de sucesso, retorna Status 200 e o json contendo `transactionId` e
+mensagem de sucesso.
+
 ```json
 {
   "success": "true",
@@ -193,30 +200,28 @@ A URL de callback tem que ser https.
 }
 ```
 
-**Em caso de sucesso**, retorna Status 200 e o json contendo transactionId e mensagem de sucesso.
-
 ## Erros
 
 `Status: 500 `
 
-|Mensagem|Descrição|
-|-----------|---------|
-|`PAYMENT_BRAND_ID_INVALID`|A bandeira não existe.|
-|`INSTALLMENTS_INVALID_FOR_DEBIT`|Cartão de débito não pode ter mais de uma parcela.|
-|`INVALID_PAYMENT_BRAND`|A bandeira não está habilitada para o estabelecimento.|
-|`INVALID_INSTALLMENTS_QUANTITY_OR_VALUE`|O número de parcelas ou valor minimo da parcela não é aceito pelo estabelecimento.|
-|`MERCHANT_ID_INVALID`|Id do estabelecimento não existe.|
-|`TERMINAL_ID_INVALID`|Id do terminal não existe.|
-|`MERCHANT_TERMINAL_INVALID`|Terminal do estabelecimento não está apto a receber transações remotas|
-|`VALUE_FIELD_INVALID`|Formato do campo `value` inválido|
-|`NAME_CLIENT_INVALID`|Campo `clientName` inválido|
-|`SPLIT_SUM_GREATER_THAN_TRANSACTION_VALUE`|A soma dos valores do split ultrapassam o valor total a receber.|
-|`SUPPLIER_NOT_FOUND`|O código informado não corresponde a um beneficiário existente|
-|`SUPPLIER_INVALID`|O beneficiário informado não está conectado ao estabelecimento|
+| Mensagem                                   | Descrição                                                                          |
+| ------------------------------------------ | ---------------------------------------------------------------------------------- |
+| `PAYMENT_BRAND_ID_INVALID`                 | A bandeira não existe.                                                             |
+| `INSTALLMENTS_INVALID_FOR_DEBIT`           | Cartão de débito não pode ter mais de uma parcela.                                 |
+| `INVALID_PAYMENT_BRAND`                    | A bandeira não está habilitada para o estabelecimento.                             |
+| `INVALID_INSTALLMENTS_QUANTITY_OR_VALUE`   | O número de parcelas ou valor minimo da parcela não é aceito pelo estabelecimento. |
+| `MERCHANT_ID_INVALID`                      | Id do estabelecimento não existe.                                                  |
+| `TERMINAL_ID_INVALID`                      | Id do terminal não existe.                                                         |
+| `MERCHANT_TERMINAL_INVALID`                | Terminal do estabelecimento não está apto a receber transações remotas             |
+| `VALUE_FIELD_INVALID`                      | Formato do campo `value` inválido                                                  |
+| `NAME_CLIENT_INVALID`                      | Campo `clientName` inválido                                                        |
+| `SPLIT_SUM_GREATER_THAN_TRANSACTION_VALUE` | A soma dos valores do split ultrapassam o valor total a receber.                   |
+| `SUPPLIER_NOT_FOUND`                       | O código informado não corresponde a um beneficiário existente                     |
+| `SUPPLIER_INVALID`                         | O beneficiário informado não está conectado ao estabelecimento                     |
 
 ```json
 {
-   "success": "false",
-   "error": "<Error message>"
+  "success": "false",
+  "error": "<Error message>"
 }
 ```
