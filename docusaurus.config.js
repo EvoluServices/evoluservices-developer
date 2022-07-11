@@ -53,7 +53,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Evoluservices",
+        title: "EvoluServices",
         logo: {
           alt: "Evoluservices Logo",
           src: "img/evo.png",

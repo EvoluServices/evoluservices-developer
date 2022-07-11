@@ -8,10 +8,12 @@ const FeatureList = [
     Svg: require("@site/static/img/logo-saude.svg").default,
     description: (
       <>
-        Sistema completo de pagamentos com cartões,
-        desenvolvido exclusivamente para profissionais da área da saúde,
-         com soluções que facilitam também os processos
-         administrativos nas clínicas ou consultórios
+        <span className='text--justify'>
+          Sistema completo de pagamentos com cartões,
+          desenvolvido exclusivamente para profissionais da área da saúde,
+          com soluções que facilitam também os processos
+          administrativos nas clínicas ou consultórios.
+        </span>
       </>
     ),
   },
@@ -20,9 +22,11 @@ const FeatureList = [
     Svg: require("@site/static/img/logo-evo.svg").default,
     description: (
       <>
-        Sistema de pagamento elaborado para atender à determinados
-        segmentos do comercio oferecendo soluções personalizadas
-        e atendimento diferenciado para os estabelecimentos cadastrados
+        <span className='text--justify'>
+          Sistema de pagamento elaborado para atender à determinados
+          segmentos do comercio, oferecendo soluções personalizadas
+          e atendimento diferenciado para os estabelecimentos cadastrados.
+        </span>
       </>
     ),
   },
@@ -31,9 +35,12 @@ const FeatureList = [
     Svg: require("@site/static/img/logo-finpet.svg").default,
     description: (
       <>
-        Sistema de pagamento ideal para o mundo pet
-        com Ferramentas exclusivas para a área veterinária
-        com split de Pagamento para seus prestadores de serviços e fornecedores
+        <span className='text--justify'>
+          Sistema de pagamento ideal para o mundo pet
+          com ferramentas exclusivas para a área veterinária,
+          com <i>split</i> de pagamento para seus prestadores de serviços
+          e fornecedores.
+        </span>
       </>
     ),
   },
