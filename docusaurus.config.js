@@ -67,13 +67,13 @@ const config = {
           },
           {
             type: "doc",
-            docId: "paymentLink/intro-payment-link",
+            docId: "payment-link/intro-payment-link",
             label: "Link de Pagamento",
             position: "left",
           },
           {
             type: "doc",
-            docId: "remoteTransaction/intro-remote-transaction",
+            docId: "remote-transaction/intro-remote-transaction",
             label: "Transação Remota",
             position: "left",
           },
@@ -102,11 +102,11 @@ const config = {
               },
               {
                 label: "Link de Pagamento",
-                to: "/docs/paymentLink/intro-payment-link",
+                to: "/docs/payment-link/intro-payment-link",
               },
               {
                 label: "Transação Remota",
-                to: "/docs/remoteTransaction/intro-remote-transaction",
+                to: "/docs/remote-transaction/intro-remote-transaction",
               },
               {
                 label: "Contato",

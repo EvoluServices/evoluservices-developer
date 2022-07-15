@@ -10,7 +10,7 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |-----------|----|---------|
 |`remoteTransactionId`|Texto|Identificador da transação.|
 |`transactionNumber`|Texto|Número da transação.|
-|`status`|Texto|Status da transação (consulte  a [tabela de status da transação](../../remoteTransaction/value-table/transaction-status)).|
+|`status`|Texto|Status da transação (consulte  a [tabela de status da transação](../../remote-transaction/value-table/transaction-status)).|
 |`merchantId`|Número|Identificador do estabelecimento.|
 |`value`|Número|Valor total da transação.|
 |`paymentBrand`|Texto|Bandeira do cartão (para lista consulte a [tabela de bandeiras](../value-table/brand)).|
