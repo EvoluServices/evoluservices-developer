@@ -24,7 +24,7 @@ Os erros desse método são do tipo `HTTP 401` e `HTTP 500`
 ```
 
 :::info informações
-Para qualquer um dos casos acima peça um novo token de [token](../category/autenticação)
+Para qualquer um dos casos acima peça um novo token de [token](../remote-transaction/autentication)
 :::
 <br></br>
 

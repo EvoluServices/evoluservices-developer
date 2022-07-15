@@ -83,5 +83,5 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |`recipientDocument`|Texto|Documento do estabelecimento ou do beneficiário, no caso do split.|
 
 :::info informações
-Veja a seção **[Tabela de Valores](../../category/tabela-de-valores)** para os possíveis status da transação e do pagamento.
+Veja a seção **[Tabela de Valores](../../remote-transaction/value-table)** para os possíveis status da transação e do pagamento.
 :::

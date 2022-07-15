@@ -7,7 +7,7 @@ sidebar_position: 2
 Para criar uma transação que utilizará cartão de crédito, é necessário enviar uma requisição utilizando o método `POST` utilizando no header o token informado além dos dados de uma transação para registro na EvoluServices, conforme o exemplo.
 
 :::info informações
-Antes de criar um transação, verifique o status do terminal. Veja a seção **[Listar todos os terminais](./terminals/list-all-terminals)**.
+Antes de criar um transação, verifique o status do terminal. Veja a seção **[Listar todos os terminais](../terminals/list-all-terminals)**.
 :::
 
 ## Requisição HTTP
@@ -153,7 +153,7 @@ private static void CreateTransaction()
 |`terminalId`|Texto|Não|Id do terminal reponsável por processar a transação. Caso especificado, a transação iniciará automaticamente, caso contrário, uma notificação será exibida nos dispositivos habilitados. A lista de ids pode ser obtida através do método [Listar terminais](./terminals/list-all-terminals)|`[0-9A-Za-z+/*]{6,300}`|
 |`value`|Número|Sim|Valor do orçamento (em decimal, com o "." como separador e 2 casas decimais).|`\d+\.\d{2}`|
 |`installments`|Número|Não|Número de parcelas|`\d{1,9}`|
-|`paymentBrand`|Texto|Não|Bandeira do cartão. Se o número de parcelas for especificado, a bandeira se torna *obrigatória*.|[Tabela de bandeiras](./value-table/brand)|
+|`paymentBrand`|Texto|Não|Bandeira do cartão. Se o número de parcelas for especificado, a bandeira se torna *obrigatória*.|[Tabela de bandeiras](../value-table/brand)|
 |`callbackUrl`|Texto|Não|URL de retorno com os dados da transação após processamento. A URL deve ser https.|[URLValidator](https://commons.apache.org/proper/commons-validator/apidocs/org/apache/commons/validator/routines/UrlValidator.html) (Com schema apenas `https`)|
 |`clientName`|Texto|Não|Nome do cliente final ao qual a transação pertence. Apesar de não obrigatório, recomenda-se fortemente que esse campo se preenchido.|`[0-9A-Za-záéíóúÁÉÍÓÚàèìòùÀÈÌÒÙâêîôûÂÊÎÔÛãõÃÕçÇäëïöüÄËÏÖÜ&!() #%@$+',-.]+`|
 |`installmentsCanChange`|Booleano|Não|Define se o número de parcelas e a bandeira da transação podem ou não ser alterados pelo cliente.|<code>(true&#124;false)</code>|

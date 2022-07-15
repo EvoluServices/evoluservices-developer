@@ -62,5 +62,5 @@ Os erros desse método são do tipo `HTTP 401` e `HTTP 500`
 ```
 
 :::info informações
-Para o erro INVALID_TOKEN peça um novo token de **[Autenticação](../../category/autenticação)**.
+Para o erro INVALID_TOKEN peça um novo token de **[Autenticação](../../remote-transaction/autentication)**.
 :::
