@@ -27,125 +27,7 @@ Antes de criar um transação, verifique o status do terminal. Veja a seção **
 A requisição precisa incluir um <b>token de autenticação válido</b> no header.
 :::
 
-## Body
-
-### Java
-
-```java
- public static void main(String[] args) throws IOException {
-		// JSON com as informações de inicio da transação remota
-        String rawData = "{'transaction': { 'merchantId': 'ABC123','value': '10.00','installments': '2','paymentBrand': 'VISA_CREDITO'}}";
-
-		// Endpoint com somente os atributos necessários setados
-		URL u = new URL("https://sandbox.evoluservices.com/remote/transaction");
-        HttpURLConnection conn = (HttpURLConnection) u.openConnection();
-        conn.setDoOutput(true);
-        conn.setRequestMethod("POST");
-        conn.setRequestProperty("Content-Type", "application/json; charset=utf8");
-        conn.setRequestProperty(
-                "Bearer",
-                "xyz_456");
-        OutputStream os = conn.getOutputStream();
-        os.write(rawData.toString().getBytes("UTF-8"));
-        os.close();
-
-        StringBuilder sb = new StringBuilder();
-        int HttpResult = conn.getResponseCode();
-
-		// Se o resultado for HTTP OK, recebemos uma mensagem de sucesso
-        if (HttpResult == HttpURLConnection.HTTP_OK) {
-            BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream(), "utf-8"));
-
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                sb.append(line + "\n");
-            }
-            br.close();
-            System.out.println("" + sb.toString());
-
-        } else {
-			// Caso contrário, lemos o código e mensagem de erro
-            System.out.println(conn.getResponseCode());
-            System.out.println(conn.getResponseMessage());
-        }
-    }
-```
-### C#
-```csharp
-private static void CreateTransaction()
-	{
-		HttpWebRequest request = (HttpWebRequest)WebRequest.Create("http://sandbox.evoluservices.com/remote/transaction");
-		request.Method = "POST";
-		request.ContentType = "application/json";
-		request.Headers["Bearer"] = "XYZ456";
-		using (Stream requestStream = request.GetRequestStream())
-		{
-			string auth = JsonConvert.SerializeObject(new { transaction = new { merchantId = "ABC123", value = "10.00", installments = "2", paymentBrand = "VISA_CREDITO" } });
-			byte[] buffer = Encoding.ASCII.GetBytes(auth);
-			requestStream.Write(buffer, 0, buffer.Length);
-		}
-
-		try
-		{
-			using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-			{
-				using (Stream responseStream = response.GetResponseStream())
-				{
-					using (StreamReader sr = new StreamReader(responseStream))
-					{
-						dynamic transactionApproved = JsonConvert.DeserializeObject<dynamic>(sr.ReadToEnd());
-						string transactionId = transactionApproved.transactionId.Value;
-						Debug.WriteLine("TransactionID:" + transactionId);
-					}
-				}
-			}
-		}
-		catch (WebException webException)
-		{
-			throw new ApiError(webException.Message, ((HttpWebResponse)webException.Response).StatusCode, ((HttpWebResponse)webException.Response).StatusDescription);
-		}
-	}
-
-	public class ApiError : Exception
-	{
-		public HttpStatusCode StatusCode { get; set; }
-		public string ReasonPhrase { get; set; }
-
-		public ApiError(string message, HttpStatusCode statusCode, string reasonPhrase) : base(message)
-		{
-			ReasonPhrase = reasonPhrase;
-			StatusCode = statusCode;
-		}
-	}
-```
-### JSON
-```json
-{
-  "transaction": {
-    "merchantId": "<id>",
-    "terminalId": "<id>",
-    "value": "10.00",
-    "installments": 2,
-    "paymentBrand": "VISA_CREDITO",
-    "callbackUrl": "<url>",
-    "clientName": "<name>",
-    "installmentsCanChange": "false",
-    "clientEmail": "<email>",
-    "splits": [
-      {
-        "code": "<code>",
-        "value": "2.00",
-        "chargeFees": true
-      },
-      {
-        "code": "<code>",
-        "value": "3.00",
-        "chargeFees": false
-      }
-    ]
-  }
-}
-```
+## Parâmetros
 
 |Propriedade |Tipo|Obrigatório|Descrição|Validação|
 |----------- |----|-----------|---------|---------|
@@ -174,6 +56,39 @@ private static void CreateTransaction()
 Para especificar o tipo de cobrança (crédito/débito) da transação remota na maquininha (POS), utilize o campo 'paymentBrand' com uma bandeira referente ao tipo desejado. Consulte a tabela de bandeiras para os demais
 casos.
 :::
+
+
+## Body
+
+### JSON
+
+```json
+{
+  "transaction": {
+    "merchantId": "<id>",
+    "terminalId": "<id>",
+    "value": "10.00",
+    "installments": 2,
+    "paymentBrand": "VISA_CREDITO",
+    "callbackUrl": "<url>",
+    "clientName": "<name>",
+    "installmentsCanChange": "false",
+    "clientEmail": "<email>",
+    "splits": [
+      {
+        "code": "<code>",
+        "value": "2.00",
+        "chargeFees": true
+      },
+      {
+        "code": "<code>",
+        "value": "3.00",
+        "chargeFees": false
+      }
+    ]
+  }
+}
+```
 
 ## Parâmetros do split
 

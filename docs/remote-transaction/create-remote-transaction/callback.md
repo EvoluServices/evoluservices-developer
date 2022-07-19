@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # Callback
 
+### Parâmetros
+
 Se uma URL for enviada ao criar a transação, um JSON contendo os dados a seguir será enviado via POST quando o status da transação for alterado.
 
 |Propriedade|Tipo|Descrição|
@@ -21,6 +23,11 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |`clientName`|Texto|Nome do cliente que passou a transação, quando fornecido.|
 |`NSU`|Número|NSU da transação, disponível apenas depois de aprovada.|
 |`authorizationNumber`|Número|Número de autorização da transação, disponível apenas depois de aprovada.|
+
+
+### Body
+
+#### JSON
 
 ```json
 {
@@ -72,7 +79,8 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 }
 ```
 
-## Parâmetros dos pagamentos aos estabelecimentos e dos splits
+### Parâmetros dos pagamentos aos estabelecimentos e dos splits
+
 |Propriedade|Tipo|Descrição|
 |-----------|----|---------|
 |`status`|Texto|Status do pagamento.|
