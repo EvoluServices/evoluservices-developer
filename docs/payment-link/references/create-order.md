@@ -17,11 +17,11 @@ Cria novo link de pagamento e retorna url para o pagamento a ser realizado.
 |order|body|object|sim|
 |order.reference|body|string|sim|Identificação referenciando o order|
 |order.redirectUrl|body|string|não|Redireciona a URL depois do pagamento do pedido. Faça um retorno de chamada 'POST' com o formato 'x-www-form-urlencoded' e com os parâmetros 'uuid' e 'transactionNumber'|
-|order.amount|body|string|simd|Valor do order, com menor unidade de contagem|
-|order.maxInstallments|body|number|não|Número máximo de parcelas permitidos pelo order|
+|order.amount|body|string|sim|Valor do order, com menor unidade de contagem|
+|order.maxInstallments|body|number|sim|Número máximo de parcelas permitidos pelo order|
 |order.minInstallments|body|number|não|Número mínimo de parcelas permitidos pelo order. Opcional, caso não seja inserido um valor será considerado como `1`, por padrão. Não pode ser maior do que o valor inserido em `maxInstallments`.|
 |order.merchantCode|body|string|sim|Código do estabelecimento referente ao order|
-|order.customerName|body|string|não|Nome do cliente do order|
+|order.customerName|body|string|sim|Nome do cliente do order|
 |order.customerDocument|body|string|não|Documento do cliente do order|
 |order.recurrent|body|boolean|não|Indica se o pagamento do order é do tipo recorrente ou não|
 |order.recurrenceType|body|string|não|Tipo de recorrência do pagamento do order podendo ser mensal ou flexível  (por período fixo determinado). O preenchimento do campo é Obrigatório caso o campo `recurrent` seja definido como `true`.|
