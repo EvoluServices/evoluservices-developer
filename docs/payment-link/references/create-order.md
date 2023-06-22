@@ -15,7 +15,7 @@ Cria novo link de pagamento e retorna url para o pagamento a ser realizado.
 |Nome|In|Tipo|Obrigatório|Descrição|
 |---|---|---|---|---|
 |order|body|object|sim|
-|order.reference|body|string|não|Identificação referenciando o order|
+|order.reference|body|string|sim|Identificação referenciando o order|
 |order.redirectUrl|body|string|não|Redireciona a URL depois do pagamento do pedido. Faça um retorno de chamada 'POST' com o formato 'x-www-form-urlencoded' e com os parâmetros 'uuid' e 'transactionNumber'|
 |order.amount|body|string|simd|Valor do order, com menor unidade de contagem|
 |order.maxInstallments|body|number|não|Número máximo de parcelas permitidos pelo order|
