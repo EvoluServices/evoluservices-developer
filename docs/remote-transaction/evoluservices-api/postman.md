@@ -7,7 +7,7 @@ sidebar_position: 2
 Aqui está uma coleção de requisições de exemplo no Postman para ajudar a se
 familiarizar mais rapidamente com as nossas APIs.
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/3ba3fc56dc178535950c)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://elements.getpostman.com/redirect?entityId=9885905-e62a5909-53f0-4729-a071-41e39531ef3c&entityType=collection)
 
 ### Importante
 
@@ -25,5 +25,5 @@ Environment as seguintes variáveis:
 
 ```
 bearer
-merchantId
+merchantCode
 ```
