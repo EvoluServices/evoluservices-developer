@@ -25,5 +25,5 @@ Environment as seguintes variáveis:
 
 ```
 bearer
-merchantCode
+merchantId
 ```
