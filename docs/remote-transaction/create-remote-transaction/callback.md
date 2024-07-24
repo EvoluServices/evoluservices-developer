@@ -21,8 +21,10 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 |`paymentQuantity`|Número|Número de pagamentos ao estabelecimento.|
 |`splits`|Lista de objetos|Informações ligadas aos splits de pagamento.|
 |`clientName`|Texto|Nome do cliente que passou a transação, quando fornecido.|
+|`clientDocument`|Texto|Documento do cliente que passou a transação, quando fornecido.|
 |`NSU`|Número|NSU da transação, disponível apenas depois de aprovada.|
 |`authorizationNumber`|Número|Número de autorização da transação, disponível apenas depois de aprovada.|
+|`orderUuid`|Texto|identificador único da Order.|
 
 
 ### Body
@@ -34,11 +36,13 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
   "remoteTransactionId": "<id>",
   "status": "APPROVED",
   "merchantId": "<id>",
+  "orderUuid": "<id>",
   "value": "10.00",
   "paymentBrand": "VISA_CREDITO",
   "transactionNumber": "<transactionNumber>",
   "paymentQuantity": "2",
   "clientName": "CLIENT_NOT_INFORMED",
+  "clientDocument": "",
   "terminalId": "<id>",
   "payments": [
     {
