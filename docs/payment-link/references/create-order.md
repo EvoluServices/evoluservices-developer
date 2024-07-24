@@ -22,7 +22,7 @@ Cria novo link de pagamento e retorna url para o pagamento a ser realizado.
 |order.minInstallments|body|number|não|Número mínimo de parcelas permitidos pelo order. Opcional, caso não seja inserido um valor será considerado como `1`, por padrão. Não pode ser maior do que o valor inserido em `maxInstallments`.|
 |order.merchantCode|body|string|sim|Código do estabelecimento referente ao order|
 |order.customerName|body|string|sim|Nome do cliente do order|
-|order.customerDocument|body|string|não|Documento do cliente do order|
+|order.customerDocument|body|string|não|Documento do cliente do order. CPF ou CNPJ, apenas números, documentos formatados com sinais gráficos de ponto, hífen e barra não são válidos.|
 |order.recurrent|body|boolean|não|Indica se o pagamento do order é do tipo recorrente ou não|
 |order.recurrenceType|body|string|não|Tipo de recorrência do pagamento do order podendo ser mensal ou flexível  (por período fixo determinado). O preenchimento do campo é Obrigatório caso o campo `recurrent` seja definido como `true`.|
 |order.quantityCharges|body|number|não|Quantidade de recorrências que serão cobradas no order O preenchimento do campo é Obrigatório caso o campo `recurrent` seja definido como `true`.|

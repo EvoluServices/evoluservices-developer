@@ -38,6 +38,7 @@ A requisição precisa incluir um <b>token de autenticação válido</b> no head
 |`paymentBrand`|Texto|Não|Bandeira do cartão. Se o número de parcelas for especificado, a bandeira se torna *obrigatória*.|[Tabela de bandeiras](../value-table/brand)|
 |`callbackUrl`|Texto|Não|URL de retorno com os dados da transação após processamento. A URL deve ser https.|[URLValidator](https://commons.apache.org/proper/commons-validator/apidocs/org/apache/commons/validator/routines/UrlValidator.html) (Com schema apenas `https`)|
 |`clientName`|Texto|Não|Nome do cliente final ao qual a transação pertence. Apesar de não obrigatório, recomenda-se fortemente que esse campo se preenchido.|`[0-9A-Za-záéíóúÁÉÍÓÚàèìòùÀÈÌÒÙâêîôûÂÊÎÔÛãõÃÕçÇäëïöüÄËÏÖÜ&!() #%@$+',-.]+`|
+|`clientDocument`|Texto|Não|Documento do cliente final ao qual a transação pertence. CPF ou CNPJ, apenas números, documentos formatados com sinais gráficos de ponto, hífen e barra não são válidos.|`[0-9]`|
 |`installmentsCanChange`|Booleano|Não|Define se o número de parcelas e a bandeira da transação podem ou não ser alterados pelo cliente.|<code>(true&#124;false)</code>|
 |`clientEmail`|Texto|Não|Email do cliente, para onde pode ser enviado o comprovante da venda, opcionalmente|`.+`|
 |`splits`|Lista de objetos|Não|Lista contendo informações de split de pagamento para cada beneficiário.|Ver <i>Parâmetros do Split</i> abaixo.|
@@ -72,6 +73,7 @@ casos.
     "paymentBrand": "VISA_CREDITO",
     "callbackUrl": "<url>",
     "clientName": "<name>",
+    "clientDocument": "<document>",
     "installmentsCanChange": "false",
     "clientEmail": "<email>",
     "splits": [
@@ -120,7 +122,7 @@ mensagem de sucesso.
 `Status: 500 `
 
 | Mensagem                                   | Descrição                                                                          |
-| ------------------------------------------ | ---------------------------------------------------------------------------------- |
+|--------------------------------------------| ---------------------------------------------------------------------------------- |
 | `PAYMENT_BRAND_ID_INVALID`                 | A bandeira não existe.                                                             |
 | `INSTALLMENTS_INVALID_FOR_DEBIT`           | Cartão de débito não pode ter mais de uma parcela.                                 |
 | `INVALID_PAYMENT_BRAND`                    | A bandeira não está habilitada para o estabelecimento.                             |
@@ -130,6 +132,7 @@ mensagem de sucesso.
 | `MERCHANT_TERMINAL_INVALID`                | Terminal do estabelecimento não está apto a receber transações remotas             |
 | `VALUE_FIELD_INVALID`                      | Formato do campo `value` inválido                                                  |
 | `NAME_CLIENT_INVALID`                      | Campo `clientName` inválido                                                        |
+| `DOCUMENT_INVALID`                         | Campo `clientDocument` inválido                                                    |
 | `SPLIT_SUM_GREATER_THAN_TRANSACTION_VALUE` | A soma dos valores do split ultrapassam o valor total a receber.                   |
 | `SUPPLIER_NOT_FOUND`                       | O código informado não corresponde a um beneficiário existente                     |
 | `SUPPLIER_INVALID`                         | O beneficiário informado não está conectado ao estabelecimento                     |
