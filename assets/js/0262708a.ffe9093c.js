@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkevoluservices_developer=self.webpackChunkevoluservices_developer||[]).push([[7139],{2370:function(e){e.exports=JSON.parse('{"permalink":"/evoluservices-developer/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
