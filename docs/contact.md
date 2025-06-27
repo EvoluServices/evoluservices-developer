@@ -11,7 +11,7 @@ para saber mais sobre os nossos produtos.
 
 ### Seja um Parceiro EvoluServices
 Caso queira se tornar um Parceiro EvoluServices, entre em contato pelo
-**[formulário de novos parceiros](https://app.pipefy.com/public/form/fSSA2SjJ?qual_o_motivo_do_seu_contato=Tenho%20interesse%20em%20realizar%20parceria)**.
+**[formulário de novos parceiros](https://app.pipefy.com/public/form/lqbmttc0?categoria=Integrador)**.
 
 ### Dúvidas Técnicas
 Caso já seja um cliente e está com dúvidas com relação à integração, entre em
