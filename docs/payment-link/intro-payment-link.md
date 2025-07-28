@@ -24,7 +24,7 @@ Para saber mais informações sobre o Postman, acesse o site do [Postman](https:
 
 No Postman, é possível importar Collections que são um conjunto de exemplos de requisições que podem ser utilizadas para fins de teste. Para importá-la clique no botão abaixo:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/5da5c26a20c0e076c7c2)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/9885905-35876279-ecbf-4981-819b-602216b92e18?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D9885905-35876279-ecbf-4981-819b-602216b92e18%26entityType%3Dcollection%26workspaceId%3D44da7bda-96eb-40ed-8bdb-010993538e5e)
 
 ### Ambiente de testes
 Para uma boa integração, disponibilizamos um ambiente de testes encontrado pela seguinte url: https://sandbox.evoluservices.com.
