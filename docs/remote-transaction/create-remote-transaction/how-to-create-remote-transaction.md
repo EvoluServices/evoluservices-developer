@@ -30,7 +30,7 @@ A requisição precisa incluir um <b>token de autenticação válido</b> no head
 ## Parâmetros
 
 |Propriedade |Tipo|Obrigatório|Descrição|Validação|
-|----------- |----|-----------|---------|---------|
+|------- |----|-----------|---------|-------|
 |`merchantId`|Texto|Sim|Identificador do estabelecimento (obtido junto ao suporte).|`[0-9A-Za-z]+`|
 |`terminalId`|Texto|Não|Id do terminal reponsável por processar a transação. Caso especificado, a transação iniciará automaticamente, caso contrário, uma notificação será exibida nos dispositivos habilitados. A lista de ids pode ser obtida através do método [Listar terminais](../terminals/list-all-terminals)|`[0-9A-Za-z+/*]{6,300}`|
 |`value`|Número|Sim|Valor do orçamento (em decimal, com o "." como separador e 2 casas decimais).|`\d+\.\d{2}`|
@@ -41,6 +41,7 @@ A requisição precisa incluir um <b>token de autenticação válido</b> no head
 |`clientDocument`|Texto|Não|Documento do cliente final ao qual a transação pertence. CPF ou CNPJ, apenas números, documentos formatados com sinais gráficos de ponto, hífen e barra não são válidos.|`[0-9]`|
 |`installmentsCanChange`|Booleano|Não|Define se o número de parcelas e a bandeira da transação podem ou não ser alterados pelo cliente.|<code>(true&#124;false)</code>|
 |`clientEmail`|Texto|Não|Email do cliente, para onde pode ser enviado o comprovante da venda, opcionalmente|`.+`|
+|`clientPhone`|Texto|Não|Telefone do cliente, contendo apenas dígitos, incluindo DDD. Este valor deve ser enviado sem formatação (ex.: 11950918864), opcionalmente|`[0-9]{10,11}`|
 |`splits`|Lista de objetos|Não|Lista contendo informações de split de pagamento para cada beneficiário.|Ver <i>Parâmetros do Split</i> abaixo.|
 
 ```json
@@ -72,10 +73,11 @@ casos.
     "installments": 2,
     "paymentBrand": "VISA_CREDITO",
     "callbackUrl": "<url>",
-    "clientName": "<name>",
-    "clientDocument": "<document>",
+    "clientName": "Cliente Teste",
+    "clientDocument": "01234567890",
     "installmentsCanChange": "false",
-    "clientEmail": "<email>",
+    "clientEmail": "integracoes@evoluservices.com",
+    "clientPhone": "11930148600",
     "splits": [
       {
         "code": "<code>",
@@ -122,7 +124,7 @@ mensagem de sucesso.
 `Status: 500 `
 
 | Mensagem                                   | Descrição                                                                          |
-|--------------------------------------------| ---------------------------------------------------------------------------------- |
+|--------------------------------------------|------------------------------------------------------------------------------------|
 | `PAYMENT_BRAND_ID_INVALID`                 | A bandeira não existe.                                                             |
 | `INSTALLMENTS_INVALID_FOR_DEBIT`           | Cartão de débito não pode ter mais de uma parcela.                                 |
 | `INVALID_PAYMENT_BRAND`                    | A bandeira não está habilitada para o estabelecimento.                             |
@@ -136,6 +138,7 @@ mensagem de sucesso.
 | `SPLIT_SUM_GREATER_THAN_TRANSACTION_VALUE` | A soma dos valores do split ultrapassam o valor total a receber.                   |
 | `SUPPLIER_NOT_FOUND`                       | O código informado não corresponde a um beneficiário existente                     |
 | `SUPPLIER_INVALID`                         | O beneficiário informado não está conectado ao estabelecimento                     |
+| `CLIENT_PHONE_INVALID`                     | O número de telefone informado é inválido                                          |
 
 ```json
 {
