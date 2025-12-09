@@ -41,7 +41,7 @@ A requisição precisa incluir um <b>token de autenticação válido</b> no head
 |`clientDocument`|Texto|Não|Documento do cliente final ao qual a transação pertence. CPF ou CNPJ, apenas números, documentos formatados com sinais gráficos de ponto, hífen e barra não são válidos.|`[0-9]`|
 |`installmentsCanChange`|Booleano|Não|Define se o número de parcelas e a bandeira da transação podem ou não ser alterados pelo cliente.|<code>(true&#124;false)</code>|
 |`clientEmail`|Texto|Não|Email do cliente, para onde pode ser enviado o comprovante da venda, opcionalmente|`.+`|
-|`clientPhone`|Texto|Não|Telefone do cliente, contendo apenas dígitos, incluindo DDD. Este valor deve ser enviado sem formatação (ex.: 11950918864), opcionalmente|`[0-9]{10,11}`|
+|`clientPhone`|Texto|Não|Telefone do cliente em formato internacional E.164. Deve iniciar com '+', seguido do código do país e do número (ex.: +5511987654321). Campo opcional.|`^\+[1-9]\d{1,14}$`|
 |`splits`|Lista de objetos|Não|Lista contendo informações de split de pagamento para cada beneficiário.|Ver <i>Parâmetros do Split</i> abaixo.|
 
 ```json
@@ -77,7 +77,7 @@ casos.
     "clientDocument": "01234567890",
     "installmentsCanChange": "false",
     "clientEmail": "integracoes@evoluservices.com",
-    "clientPhone": "11930148600",
+    "clientPhone": "+5511987654321",
     "splits": [
       {
         "code": "<code>",

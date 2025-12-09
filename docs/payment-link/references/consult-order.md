@@ -43,6 +43,8 @@ Consulta o Link de Pagamento de acordo com o uuid.
 |transaction.customer|object|Objeto contendo informações do cliente que efetuou a transação com link de pagamento.|
 |transaction.customer.name|string|Nome do cliente|
 |transaction.customer.document|string|Documento do cliente|
+|transaction.customer.phone|string|Telefone do cliente|
+|transaction.customer.email|string|Email do cliente|
 |transaction.payments|[payment]|Lista contendo informações sobre o pagamento da transação gerada pelo link de pagamento.|
 |payment.number|number|Número do pagamento|
 |payment.amount|number|Valor do pagamento, em formato decimal|
@@ -123,7 +125,9 @@ Consulta o Link de Pagamento de acordo com o uuid.
       "authorizationNumber": "470216",
       "customer": {
         "name": "Jose da Silva",
-        "document": "123.456.789-09"
+        "document": "123.456.789-09",
+        "email": "integracoes@evoluservices.com",
+        "phone": "5511987654321"
       },
       "payments": [
         {
