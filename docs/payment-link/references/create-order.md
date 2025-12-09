@@ -53,7 +53,7 @@ Cria novo link de pagamento e retorna url para o pagamento a ser realizado.
     "merchantCode": "A1B2C3",
     "customerName": "Rodrigo",
     "customerDocument": "01234567890",
-    "customerPhone":"11930148600",
+    "customerPhone":"+5511987654321",
     "customerEmail":"integracoes@evoluservices.com",
     "recurrent": true,
     "recurrenceType": "MONTHLY",
