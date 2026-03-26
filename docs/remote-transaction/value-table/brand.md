@@ -12,13 +12,10 @@ sidebar_position: 4
 |`MAESTRO`|MasterCard Maestro (Débito)|
 |`AMEX`|American Express|
 |`DINERS`|Diners|
-|`HIPERCARD`|Hipercard|
-|`AURA`|Aura|
 |`SOROCRED`|Sorocred|
 |`ELO`|Elo|
 |`SICREDI`|Sicred|
 |`ELO_DEBITO`|Elo Débito|
-|`HIPER`|Hiper|
 |`AGIPLAN`|Agiplan|
 |`BANESCARD`|Banescard|
 |`CREDZ`|CredZ|
