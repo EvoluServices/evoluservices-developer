@@ -86,22 +86,10 @@ a partir do UUID da order.
 | VISA_CREDITO |
 | MASTERCARD |
 | AMEX |
-| DINERS |
-| HIPERCARD |
-| AURA |
-| SOROCRED |
-| BANRISUL |
 | ELO |
-| SICREDI |
-| HIPER |
-| AGIPLAN |
-| BANESCARD |
-| CREDZ |
-| JCB |
-| CABAL |
-| MAIS |
-| REDESHOP |
 
+
+        
 ## Exemplo
 
 > 200 Response
