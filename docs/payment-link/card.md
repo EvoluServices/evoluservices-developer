@@ -10,9 +10,9 @@ sidebar_position: 2
 
 
 
-| BANDEIRA   |  NUMERO DO CARTÃO   |  STATUS DA TRANSAÇÃO |  MENSAGEM DE RETORNO                             |
+| BANDEIRA   | NUMERO DO CARTÃO    |  STATUS DA TRANSAÇÃO |  MENSAGEM DE RETORNO                             |
 |------------|---------------------|----------------------|--------------------------------------------------|               
-| VISA       | 4111.1111.111.1111  | Autorizado           | Operação realizada com sucesso			 |
+| VISA       | 4111.1111.1111.1111 | Autorizado           | Operação realizada com sucesso			 |
 | VISA       | 4000.0000.0000.1091 | Autorizado           | Operação realizada com sucesso - Autenticador 3DS| 
 | VISA       | 4235.6477.2802.5682 | Não Autorizado       | Não Autorizada                                   |
 | MASTERCARD | 5200.0000.0000.1013 | Não Autoriza         | Cartão Expirado                                  |
