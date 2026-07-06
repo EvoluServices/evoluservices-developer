@@ -67,25 +67,25 @@ casos.
 ```json
 {
   "transaction": {
-    "merchantId": "<id>",
-    "terminalId": "<id>",
+    "merchantId": "520r5b56-t490-442g-b31e-8626b629caf8",
+    "terminalId": "AA123456",
     "value": "10.00",
     "installments": 2,
     "paymentBrand": "VISA_CREDITO",
-    "callbackUrl": "<url>",
+    "callbackUrl": "https://integration.exemplo.com.br/api/EvoluServices/callback",
     "clientName": "Cliente Teste",
     "clientDocument": "01234567890",
     "installmentsCanChange": "false",
     "clientEmail": "integracoes@evoluservices.com",
-    "clientPhone": "+5511987654321",
+    "clientPhone": "+5511999999999",
     "splits": [
       {
-        "code": "<code>",
+        "code": "NIGF01",
         "value": "2.00",
         "chargeFees": true
       },
       {
-        "code": "<code>",
+        "code": "TYGF04",
         "value": "3.00",
         "chargeFees": false
       }

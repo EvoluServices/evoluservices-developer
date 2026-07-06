@@ -33,33 +33,33 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
 
 ```json
 {
-  "remoteTransactionId": "<id>",
+  "remoteTransactionId": "2004695426271364186",
   "status": "APPROVED",
-  "merchantId": "<id>",
-  "orderUuid": "<id>",
+  "merchantId": "520f5b56-f490-442f-b31e-8626b629caf8",
+  "orderUuid": "",
   "value": "10.00",
   "paymentBrand": "VISA_CREDITO",
-  "transactionNumber": "<transactionNumber>",
+  "transactionNumber": "2004695426271364186",
   "paymentQuantity": "2",
-  "clientName": "CLIENT_NOT_INFORMED",
-  "clientDocument": "",
-  "terminalId": "<id>",
+  "clientName": "João da Silva",
+  "clientDocument": "012.345.678-90",
+  "terminalId": "AA123456",
   "payments": [
     {
       "status": "UNPAID",
       "value": 4.95,
       "number": 1,
-      "date": "21/12/2016",
-      "recipientName": "<name>",
-      "recipientDocument": "<document>"
+      "date": "21/07/2027",
+      "recipientName": "Evoluservices Teste",
+      "recipientDocument": "01.234.567.0001-09"
     },
     {
       "status": "UNPAID",
       "value": 4.95,
       "number": 2,
-      "date": "21/01/2017",
-      "recipientName": "<name>",
-      "recipientDocument": "<document>"
+      "date": "21/08/2027",
+      "recipientName": "Evoluservices Teste",
+      "recipientDocument": "01.234.567.0001-01"
     }
   ],
   "splits": [
@@ -67,17 +67,17 @@ Se uma URL for enviada ao criar a transação, um JSON contendo os dados a segui
       "status": "UNPAID",
       "value": 2.35,
       "number": 1,
-      "date": "02/02/2020",
-      "recipientName": "<name>",
-      "recipientDocument": "<document>"
+      "date": "02/08/2027",
+      "recipientName": "Evoluservices Teste",
+      "recipientDocument": "01.234.567.0001-01"
     },
     {
       "status": "UNPAID",
       "value": 3.15,
       "number": 2,
-      "date": "02/03/2020",
-      "recipientName": "<name>",
-      "recipientDocument": "<document>"
+      "date": "02/09/2027",
+      "recipientName": "Evoluservices Teste",
+      "recipientDocument": "01.234.567.0001-01"
     }
   ]
 }
