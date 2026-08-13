@@ -7,22 +7,16 @@ sidebar_position: 4
 
 Consulta o Link de Pagamento de acordo com o uuid.
 
+:::caution Atenção
+Para executar esta operação, você deve estar autenticado através do método:
+BasicAuth
+:::
+
 ## Parâmetro
 
 |Nome|In|Tipo|Obrigatório|Descrição|
 |---|---|---|---|---|
 |uuid|path|string|Sim|UUID do Link de Pagamento|
-
-## Respostas
-
-|Status|Descrição Padronizada|Descrição Detalhada|
-|---|---|---|
-|**200**|OK|OK|
-|**400**|Bad Request|Exceção de validação|
-|**401**|Unauthorized|Não autorizado|
-|**404**|Not Found|Pedido não encontrado|
-|**422**|Unprocessable Entity|Erro de integração|
-|**500**|Internal Server Error|Erro interno no servidor|
 
 ### Schema
 |Nome|Tipo|Descrição|
@@ -53,101 +47,63 @@ Consulta o Link de Pagamento de acordo com o uuid.
 |payment.merchant.name|string|Nome do estabelecimento|
 |payment.merchant.document|string|Documento do estabelecimento|
 
-#### Valores Enumerados
-
-##### status
-|Valor|
-|---|
-|APPROVED|
-|PENDING|
-|CANCELED|
-
-##### transaction.status
-|Valor|
-|---|
-|APPROVED|
-|CANCELLED|
-|ABORTED|
-|ABORTED_BY_MERCHANT|
-|PARTIALLY_CANCELED|
-
-##### transaction.paymentBrand
-|Valor|
-|---|
-|VISA_CREDITO|
-|MASTERCARD|
-|AMEX|
-|DINERS|
-|HIPERCARD|
-|AURA|
-|SOROCRED|
-|BANRISUL|
-|ELO|
-|SICREDI|
-|HIPER|
-|AGIPLAN|
-|BANESCARD|
-|CREDZ|
-|JCB|
-|CABAL|
-|MAIS|
-|REDESHOP|
-
-##### payment.status
-|Valor|
-|---|
-|PAYED|
-|UNPAID|
-|ANTICIPATION_REQUESTED|
-|ANTICIPATED|
-|CANCEL_REQUESTED|
-|CANCELLED|
-
 ### Exemplo
 
 > 200 Response
 
 ```json
 {
-  "uuid": "e2ba235d-0b30-4edc-981d-e2c222763aee",
+  "uuid": "dd2deaa2-fd6f-4212-9d64-3bb96a0dbfd8",
   "reference": "123CLIENTS",
   "status": "APPROVED",
-  "expirationDate": "2020-07-16",
+  "expirationDate": "",
   "transactionList": [
     {
-      "number": "12345678909",
+      "number": 2426062400001,
       "status": "APPROVED",
-      "amount": "10000",
-      "installments": "2",
+      "amount": "100.00",
+      "installments": 1,
       "paymentBrand": "VISA_CREDITO",
-      "paymentQuantity": "3",
-      "nsu": "993485982",
-      "authorizationNumber": "470216",
+      "paymentQuantity": 3,
+      "nsu": "42589606398535608",
+      "authorizationNumber": "218140",
       "customer": {
-        "name": "Jose da Silva",
-        "document": "123.456.789-09",
-        "email": "integracoes@evoluservices.com",
-        "phone": "5511987654321"
+        "name": "WAGNER",
+        "document": "01234567890",
+        "email": "a@b.com",
+        "phone": "(11) 91111-1111"
       },
       "payments": [
         {
-          "number": "12345678909",
-          "amount": "100.00",
-          "status": "PAYED",
-          "payDate": "01/01/2001",
+          "number": 1,
+          "amount": "36.00",
+          "status": "UNPAID",
+          "payDate": "27/07/2026",
           "merchant": {
-            "name": "Jose da Silva",
-            "document": "123.456.789-09"
+            "name": "Ecommerce Social",
+            "document": "93787081000100"
           }
+        }
+      ],
+      "splits": [
+        {
+          "date": "27/07/2026",
+          "number": "1",
+          "value": "30.00",
+          "status": "UNPAID",
+          "recipientName": "PinPad SiTef",
+          "recipientDocument": "25403140000131"
+        },
+        {
+          "date": "27/07/2026",
+          "number": "1",
+          "value": "30.00",
+          "status": "UNPAID",
+          "recipientName": "Fornecedor PJ que nao deve mudar a conta",
+          "recipientDocument": "56132150000103"
         }
       ]
     }
   ]
 }
 ```
-
-:::caution Atenção
-Para executar esta operação, você deve estar autenticado através do método:
-BasicAuth
-:::
-

@@ -15,16 +15,6 @@ Obtém as formas de pagamento disponíveis ao estabelecimento dado o valor pré-
 |paymentMethods.amount|query|string|sim|Valor do pagamento|
 |paymentMethods.merchantCode|query|string|sim|Código de identificação do estabelecimento|
 
-## Respostas
-
-|Status|Descrição Padronizada|Descrição Detalhada|
-|---|---|---|
-|200|OK|OK|
-|400|Bad Request|Exceção de validação|
-|401|Unauthorized|Não autorizado|
-|404|Not Found|Estabelecimento não encontrado|
-|422|Unprocessable Entity|Erro de integração|
-|500|Internal Server Error|Erro interno no servidor|
 
 ### Schema
 
