@@ -9,23 +9,16 @@ sidebar_position: 6
 Consulta os dados de uma recorrência associada a um Link de Pagamento (order),
 a partir do UUID da order.
 
+:::caution Atenção
+Para executar esta operação, você deve estar autenticado através do método:
+BasicAuth
+:::
+
 ## Parâmetro
 
 | Nome | In | Tipo | Obrigatório | Descrição |
 |---|---|---|---|---|
 | uuid | path | string | Sim | UUID do Link de Pagamento (order) |
-
-## Respostas
-
-| Status | Descrição Padronizada | Descrição Detalhada |
-|---|---|---|
-| **200** | OK | Recorrência encontrada |
-| **400** | Bad Request | Exceção de validação |
-| **401** | Unauthorized | Não autorizado |
-| **403** | Forbidden | A order não pertence ao parceiro autenticado |
-| **404** | Not Found | Order ou recorrência não encontrada |
-| **422** | Unprocessable Entity | Erro de integração |
-| **500** | Internal Server Error | Erro interno no servidor |
 
 ## Schema
 
@@ -61,35 +54,7 @@ a partir do UUID da order.
 | paymentValue | number | Valor líquido/pago da transação |
 
 ## Valores Enumerados
-
-### status (recorrência)
-
-| Valor |
-|---|
-| ACTIVE |
-| CANCELED |
-| COMPLETE |
-
-### transaction.status
-
-| Valor |
-|---|
-| APPROVED |
-| DISAPPROVED |
-| CANCELED |
-| COMPLETE |
-
-### paymentBrand
-
-| Valor |
-|---|
-| VISA_CREDITO |
-| MASTERCARD |
-| AMEX |
-| ELO |
-
-
-        
+      
 ## Exemplo
 
 > 200 Response
