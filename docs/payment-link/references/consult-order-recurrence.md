@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Consultar uma recorrência
 
-`GET /api/orders/{uuid}/recurrence`
+`GET /api/orders/{uuid}/recurrences`
 
 Consulta os dados de uma recorrência associada a um Link de Pagamento (order),
 a partir do UUID da order.
